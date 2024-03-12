@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>reparacion de celulares</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-ligth bg-light navbar-expand-lg">
+            <div class="container-fluid" col-md-12>
+              <a class="navbar-brand" href="#" col-md-4>
+                <img src="./imagenes/LOOO.png">
+              </a>
+              <!--boton-->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" style="background-color: blue;">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+      
+              <div class="collapse navbar-collapse text-dark" id="menu">
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Cotizar</a></li>
+                  <li class="nav-item"><a href="mireparacion.html" class="nav-link">Mi reparación</a></li>
+                  <li class="nav-item"><a href="comprayventa.html" class="nav-link">Compra y venta</a></li>
+                  <li class="nav-item"><a href="contactanos.html" class="nav-link">Contactanos</a></li>
+      
+      
+                </ul>
+      
+              </div>
+            </div>
+      
+          </nav>
+    </header>
+    <main class="cotizar">
+        <div class="ccontainer">
+            <div class="title">Cotiza tu reparación</div>
+            <form id="form-validation" novalidate>
+                <div class="form-group">
+                    <span>Modelo de tu equipo</span>
+                    <input type="text" placeholder="Ingrese modelo" required>
+                    <small>Por favor ingrese modelo</small>
+                </div>
+                <div class="form-group">
+                    <span>Falla del equipo</span>
+                    <input type="text" placeholder="Ingresa tu falla" required>
+                    <small>Por favor ingrese falla</small>
+                </div>
+                <div class="form-group">
+                    <span>Detalles de la falla</span>
+                    <input type="text" placeholder="Mas detalles" required>
+                    <small>Por favor ingrese detalles</small>
+                </div>
+                <div class="form-group">
+                    <span>Nombre</span>
+                    <input type="text" placeholder="Ingresa tu nombre" required>
+                    <small>Por favor ingrese su nombre</small>
+                </div>
+                <div class="form-group">
+                    <span>Numero de telefono</span>
+                    <input type="number" placeholder="Ingresa tu numero" required>
+                    <small>Por favor su numero telefonico</small>
+                </div>
+                <div class="form-group">
+                    <span>Email</span>
+                    <input type="email" placeholder="Ingresa tu correo" required>
+                    <small>Por favor ingrese su email</small>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+        <script>
+            const addform = document.getElementById
+                ("form-validation");
+            addform.addEventListener("submit", (Event) => {
+                if (addform.checkValidity() === false) {
+                    Event.preventDefault();
+                    Event.stopPropagation();
+                    addform.classList.add('was-validated');
+                    return false
+                }
+
+            });
+        </script>
+    </main>
+    <div>
+
+    </div>
+
+    <footer>
+        <p>Conocé nuestra Política de privacidad | ©2024 Roshin Cell. Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
